@@ -9,7 +9,25 @@ var Sum = function() {
   'use strict';
 
   function sumNumbers35(n) {
+    var answer = 0;
+    if ( n > 0 ){
+      for (var i=1; i<= n; i++) {
+        if (i % 3 == 0 || i % 5 == 0){
+          answer += i;
+        }
+      }
+    }
 
+    if( n < 0 ){
+      throw ('No negative numbers allowed');
+    }
+
+    if( n==0 ){
+      console.log("Can't sum 0.")
+    }
+    
+  console.log(answer);
+  return answer;
   }
 
   return {
